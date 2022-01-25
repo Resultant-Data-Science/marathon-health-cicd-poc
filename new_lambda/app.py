@@ -1,7 +1,7 @@
 import json
 import pandas
 import datetime
-import SQLAlchemy
+import sqlalchemy
 # import requests
 
 
