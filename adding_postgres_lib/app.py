@@ -8,9 +8,10 @@ import psycopg2
 
 def validate(event, context):
     
-    response = {
-        'statusCode': 200,
-        'body': json.dumps({"psycopg2 import successful"})
+    return {
+        "statusCode": 200,
+        "body": json.dumps({
+            "message": "psycopg2 import successful",
+ 
+        })
     }
-
-    return response
