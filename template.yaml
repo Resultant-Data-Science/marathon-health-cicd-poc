@@ -16,7 +16,7 @@ Resources:
     Properties:
       CodeUri: hello_world/
       Handler: app.lambda_handler
-      Runtime: python3.7
+      Runtime: python3.9
       Layers:
         - !Ref MyLayer
       Events:
@@ -31,7 +31,7 @@ Resources:
     Properties:
       CodeUri: new_lambda/
       Handler: app.lambda_handler
-      Runtime: python3.7
+      Runtime: python3.9
       Layers:
         - !Ref MyLayer
       Events:
@@ -48,9 +48,9 @@ Resources:
       Description: pandas testing layer deployed through sam
       ContentUri: my_layer
       CompatibleRuntimes:
-        - python3.7
+        - python3.9
     Metadata:
-      BuildMethod: python3.7
+      BuildMethod: python3.9
 
 
 
