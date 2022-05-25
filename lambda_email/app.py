@@ -16,7 +16,7 @@ def validate(event, context):
     print(a)
     response = {
         'statusCode': 200,
-        'body': json.dumps({ 'result': matches1 , 'result2': matches2, 'result3': matches3})
+        'body': json.dumps({ 'result1': matches1 , 'result2': matches2, 'result3': matches3})
     }
 
     return response
