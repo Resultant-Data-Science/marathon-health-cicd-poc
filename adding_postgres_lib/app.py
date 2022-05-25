@@ -3,7 +3,6 @@ import pandas
 import datetime
 import re
 import psycopg2
-import scipy
 # import requests
 
 
