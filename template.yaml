@@ -38,7 +38,22 @@ Resources:
         HelloWorld:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
           Properties:
-            Path: /new
+            Path: /new_email
+            Method: get
+
+  EmailFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: lambda_email/
+      Handler: app.validate
+      Runtime: python3.9
+      Layers:
+        - !Ref MyLayer
+      Events:
+        HelloWorld:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /new_email
             Method: get
 
   MyLayer:
