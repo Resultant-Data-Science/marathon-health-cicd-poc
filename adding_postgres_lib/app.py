@@ -2,7 +2,7 @@ import json
 import pandas
 import datetime
 import re
-import psycopg2
+# import psycopg2
 # import requests
 
 
