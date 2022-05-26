@@ -1,5 +1,5 @@
 import json
-import pandas
+#import pandas
 import datetime
 import re
 import numpy as np
@@ -14,7 +14,7 @@ def validate(event, context):
     matches3 = email_regex.match(event['email3']) != None
     response = {
         'statusCode': 200,
-        'body': json.dumps({ 'result1': matches1 , 'result2': matches2, 'result3': matches3})
+        'body': json.dumps({ 'email-result1': matches1 , 'email-result2': matches2, 'email-result3': matches3})
     }
 
     return response
